@@ -15,7 +15,7 @@ def cool_down(heat):
 
 def cal_dmg(v):
     if 10 <= v <= 25:
-        return v ** 2
+        return 50
     else:
         # linear assumed, expected value returned
         prob_500 = 1 / (45 - 25) * (v - 25)
@@ -56,6 +56,6 @@ for v_index, v in enumerate(v_list):
 fig = plt.figure()
 ax = fig.gca(projection='3d')
 v_list, f_list = np.meshgrid(f_list, v_list)
-# surf = ax.plot_surface(v_list, f_list, dmg_array, cmap=cm.coolwarm, linewidth=0, antialiased=False)
-surf = ax.plot_surface(v_list, f_list, dmg_array)
+surf = ax.plot_surface(v_list, f_list, dmg_array, cmap=cm.coolwarm, linewidth=0, antialiased=False)
+# surf = ax.plot_surface(v_list, f_list, dmg_array)
 plt.show()
