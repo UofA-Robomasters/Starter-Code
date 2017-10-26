@@ -28,3 +28,7 @@ python -m pip install jupyter
 `jupyter notebook` or `jupyter notebook tutorial.ipynb` to open the notebook.
 
 There is detailed tutorial for Jupyter notebook as well.
+
+### Error when import plt for mac users
+This is caused by different rendering back end of matplotlib.
+Follow the instructions [here](https://stackoverflow.com/questions/21784641/installation-issue-with-matplotlib-python)
