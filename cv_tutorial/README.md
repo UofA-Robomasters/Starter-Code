@@ -3,7 +3,7 @@ Tutorial for new members of computer team in Robomasters!
 Have fun with computer vision!
 
 ### Requirements
-numpy, cv2, matplotlib (https://matplotlib.org/users/installing.html), jupyter (http://jupyter.org/install.html)
+numpy, cv2, [matplotlib](https://matplotlib.org/users/installing.html), [jupyter](http://jupyter.org/install.html)
 
 ### installing Jupyter using pip
 It is recommended to install it with Anaconda.

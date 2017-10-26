@@ -2,7 +2,7 @@
 Tutorials for new members of Robomasters. Have a good time in our club!
 
 ### Requirements
-numpy, matplotlib (https://matplotlib.org/users/installing.html)
+numpy, [matplotlib](https://matplotlib.org/users/installing.html)
 
 ### Usage
 `source robo` for windows or `source activate robo` for mac/linux if you are using the environment package(Starter-kit).
