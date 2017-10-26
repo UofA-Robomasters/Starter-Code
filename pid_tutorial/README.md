@@ -1,5 +1,6 @@
-# cv_tutorial
+# pid_tutorial
 Tutorials for new members of Robomasters. Have a good time in our club!
+This is more like a simulator for you to tune the parameters rather than a detailed tutorial.
 
 ### Requirements
 numpy, [matplotlib](https://matplotlib.org/users/installing.html)
