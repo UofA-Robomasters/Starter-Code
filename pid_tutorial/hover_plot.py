@@ -19,7 +19,6 @@ tf = 30     # end time, (sec)
 time = np.linspace(t0, tf, N)
 dt = time[1] - time[0]      # delta t, (sec)
 
-##################################################################################
 # Core simulation code
 # Initial conditions (i.e., initial state vector)
 y = [0, 0]
@@ -45,7 +44,7 @@ pid.setKD(kd)
 r = 10      # meters
 pid.setTarget(r)
 
-# Simulate quadrotor motion
+# Simulate drone motion
 j = 0       # dummy counter
 for t in time:
     # Evaluate state at next time point
@@ -54,7 +53,6 @@ for t in time:
     soln[j, :] = y
     j += 1
 
-##################################################################################
 # Plot results
 SP = np.ones_like(time)*r # altitude set point
 fig = plt.figure()
@@ -72,16 +70,16 @@ plt.show()
 
 fig2 = plt.figure()
 ax3 = fig2.add_subplot(111)
-ax3.plot(time, pid.u_p, label='u_p', linewidth=3, color = 'red')
-ax3.plot(time, pid.u_i, label='u_i', linewidth=3, color = 'blue')
-ax3.plot(time, pid.u_d, label='u_d', linewidth=3, color = 'green')
+ax3.plot(time, pid.u_p, label='u_p', linewidth=3, color='red')
+ax3.plot(time, pid.u_i, label='u_i', linewidth=3, color='blue')
+ax3.plot(time, pid.u_d, label='u_d', linewidth=3, color='green')
 ax3.set_xlabel('Time, (sec)')
 ax3.set_ylabel('Control Effort')
 h, l = ax3.get_legend_handles_labels()
 ax3.legend(h, l)
 plt.tight_layout()
 plt.show()
-##################
+
 y0 = soln[:, 0]      # altitude
 rise_time_index = np.argmax(y0>r)
 RT = time[rise_time_index]

@@ -23,7 +23,7 @@ def ydot(y, t, pid):
 
     # Model parameters
     g = -9.81  # gravity, m/s/s
-    m = 1.54  # quadrotor mass, kg
+    m = 1.54  # drone mass, kg
     c = 10.0  # electro-mechanical transmission constant
 
     # time step, (sec)
@@ -35,15 +35,15 @@ def ydot(y, t, pid):
     #  if altitude = 0
     if y0 <= 0.:
         # if control input, u <= gravity, vehicle stays at rest on the ground
-        # this prevents quadrotor from "falling" through the ground when thrust is
+        # this prevents drone from "falling" through the ground when thrust is
         # too small.
         if u <= np.absolute(g * m / c):
             y0dot = 0.
             y1dot = 0.
-        else:  # else if u > gravity and quadrotor accelerates upwards
+        else:  # else if u > gravity and drone accelerates upwards
             y0dot = y1
             y1dot = g + c / m * u - 0.75 * y1
-    else:  # otherwise quadrotor is already in the air
+    else:  # otherwise drone is already in the air
         y0dot = y1
         y1dot = g + c / m * u - 0.75 * y1
 

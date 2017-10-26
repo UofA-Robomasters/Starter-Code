@@ -1,4 +1,3 @@
-# author: @Wenzhang Qian
 class PIDController:
     def __init__(self, kp=0.0, ki=0.0, kd=0.0, start_time=0):
         # The PID controller can be initalized with a specific kp value
