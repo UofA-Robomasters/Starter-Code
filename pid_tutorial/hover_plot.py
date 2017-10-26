@@ -1,12 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from pid_controller import PIDController
-from quad1d_eom import ydot
+from drone_sim import ydot
 
 ##################################################################################
 ##################################################################################
 # CHANGE PARAMETERS HERE!!!!!!!!!!!!!!!!!!!!!!!!!
-kp = 0
+kp = 0.0
 ki = 0
 kd = 0
 ##################################################################################
